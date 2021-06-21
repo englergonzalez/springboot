@@ -21,13 +21,13 @@ public class UsuarioModel {
     private String password;
     private Integer identificacion;
 
-    @JoinColumn(name = "codigo_tipo_identificacion",referencedColumnName = "id",nullable = false, updatable = true)
-    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private IdentificacionModel codigo_tipo_identificacion;
+    //@JoinColumn(name = "codigo_tipo_identificacion")
+    //@ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Integer codigo_tipo_identificacion;
 
-    @JoinColumn(name = "codigo_estado",referencedColumnName = "id",nullable = false, updatable = true)
-    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private EstadoModel codigo_estado;
+    //@JoinColumn(name = "codigo_estado")
+    //@ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Integer codigo_estado;
 
     public Long getId() {
         return id;
@@ -77,16 +77,16 @@ public class UsuarioModel {
     public void setIdentificacion(Integer identificacion) {
         this.identificacion = identificacion;
     }
-    public IdentificacionModel getCodigo_tipo_identificacion() {
+    public Integer getCodigo_tipo_identificacion() {
         return codigo_tipo_identificacion;
     }
-    public void setCodigo_tipo_identificacion(IdentificacionModel codigo_tipo_identificacion) {
+    public void setCodigo_tipo_identificacion(Integer codigo_tipo_identificacion) {
         this.codigo_tipo_identificacion = codigo_tipo_identificacion;
     }
-    public EstadoModel getCodigo_estado() {
+    public Integer getCodigo_estado() {
         return codigo_estado;
     }
-    public void setCodigo_estado(EstadoModel codigo_estado) {
+    public void setCodigo_estado(Integer codigo_estado) {
         this.codigo_estado = codigo_estado;
     }
 }
